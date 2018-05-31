@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+body {
+  background-image: url("./images/background.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-attachment: fixed; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #4b6584; }
+
+h1, h2, h3, h4, h5, h6, a, p, li, button, span {
+  font-family: 'Poppins', sans-serif; }
+
+p, li, button, span {
+  color: #84817a; }
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 50px;
+  -webkit-box-shadow: 2px 2px 8px 1px #3d3d3d;
+  box-shadow: 2px 2px 8px 1px #3d3d3d; }
+
+.navbar {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  @media screen and (min-width: 1200px) {
+    .navbar {
+      max-width: 1140px; } }
+  @media (min-width: 992px) and (max-width: 1200px) {
+    .navbar {
+      max-width: 960px; } }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .navbar {
+      max-width: 720px; } }
+  @media (min-width: 576px) and (max-width: 768px) {
+    .navbar {
+      max-width: 540px; } }
+  .navbar .navbar-collapse .navbar-nav .nav-link {
+    color: #fff;
+    transition: ease .25s; }
+    .navbar .navbar-collapse .navbar-nav .nav-link:hover {
+      color: #4b7bec;
+      border-bottom: solid #4b7bec 1px; }
+  .navbar .navbar-collapse .navbar-nav .nav-item.active .nav-link {
+    color: #4b7bec;
+    border-bottom: solid #4b7bec 1px; }
+
+.user {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #4b7bec;
+  position: relative;
+  border: 5px #4b6584 solid;
+  -webkit-box-shadow: 1px 1px 8px 1px #BABABA;
+  box-shadow: 1px 1px 8px 1px #BABABA;
+  margin: 30px auto; }
+  .user p {
+    font-size: 75px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; }
+
+.cell.day.selected {
+  position: relative;
+  color: #fff;
+  border-radius: 50%; }
+
+a {
+  color: #20bf6b;
+  transition: ease .25s; }
+  a:hover {
+    color: #1ca95f;
+    text-decoration: none; }
+
+.btn {
+  border-radius: 0px; }
+  .btn.btn-primary {
+    background-color: #20bf6b;
+    border: #199353 thin solid; }
+    .btn.btn-primary:hover {
+      background-color: #35dd84; }
+    .btn.btn-primary:focus {
+      -webkit-box-shadow: 0 0 2px 2px #20bf6b;
+      box-shadow: 0 0 2px 2px #20bf6b; }
+    .btn.btn-primary:not(:disabled):not(.disabled):active {
+      background-color: #199353;
+      -webkit-box-shadow: 0 0 2px 2px #20bf6b;
+      box-shadow: 0 0 2px 2px #20bf6b; }
+  .btn.btn-success {
+    background-color: #2d98da;
+    border: #207cb4 thin solid; }
+    .btn.btn-success:hover {
+      background-color: #58ade2; }
+    .btn.btn-success:focus {
+      -webkit-box-shadow: 0 0 2px 2px #2d98da;
+      box-shadow: 0 0 2px 2px #2d98da; }
+    .btn.btn-success:not(:disabled):not(.disabled):active {
+      background-color: #207cb4;
+      -webkit-box-shadow: 0 0 2px 2px #2d98da;
+      box-shadow: 0 0 2px 2px #2d98da; }
+  .btn.btn-outline-primary {
+    color: #20bf6b;
+    border: #20bf6b double 3px;
+    transition: ease .25s; }
+    .btn.btn-outline-primary:hover {
+      color: #fff;
+      background-color: #20bf6b; }
+
+.list-group {
+  border-radius: 0px; }
+  .list-group .list-group-item.active {
+    background: #20bf6b;
+    border-radius: 0px;
+    border: thin #1ca95f solid; }
+
+.subject-container {
+  width: 100%;
+  position: relative; }
+
+.selected {
+  color: #20bf6b;
+  position: absolute;
+  right: 20px;
+  top: 20%; }
+
+.fade-enter {
+  z-index: 100; }
+
+.fade-enter-active {
+  z-index: 100;
+  animation: fade-in .5s forwards; }
+
+.fade-leave-active {
+  animation: fade-out .5s forwards; }
+
+@keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes fade-out {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+.slide-enter-active {
+  animation: slide-in .5s forwards; }
+
+.slide-leave-active {
+  animation: slide-out .5s forwards; }
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-30px);
+    opacity: 0; }
+  to {
+    transform: translateX(0);
+    opacity: 1; } }
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+    opacity: 1; }
+  to {
+    transform: translateX(30px);
+    opacity: 0; } }
+
+/*# sourceMappingURL=app.css.map */
