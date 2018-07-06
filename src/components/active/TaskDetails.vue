@@ -39,6 +39,7 @@
 <script>
 import NewNote from '../forms/NewNote.vue';
 import Notes from './Notes.vue';
+import swal from 'sweetalert';
 export default {
   props: ['details', 'deleteThis', 'completeThis'],
   data() {
@@ -71,16 +72,44 @@ export default {
       this.toggleEditDescription();
     },
     completeTask() {
-      let result = confirm('Are you sure you want to complete this task?');
-      if (result) {
-        this.completeThis(this.details.id);
-      }
+      swal({
+        title: 'Are you sure?',
+        text: 'Complete this task!',
+        icon: 'warning',
+        buttons: true,
+        dangerMode: true
+      })
+      .then((willComplete) => {
+        if(willComplete) {
+            this.completeThis(this.details.id);
+            swal('Task has been marked as completed', {
+              icon: 'success'
+            })
+          } else {
+            swal('Nothing happend! Get back to work.')
+        }
+      });
     },
     deleteTask() {
-      let result = confirm('Are you sure you want to Delete this task?');
-      if (result) {
-        this.deleteThis(this.details.id);
-      }
+      swal({
+        title: 'Are you sure?',
+        text: 'You will delete this Task forever!',
+        icon: 'warning',
+        buttons: true,
+        dangerMode: true
+      })
+      .then((willDelete) => {
+        if(willDelete) {
+            this.deleteThis(this.details.id);
+            swal('Task has been deleted', {
+              icon: 'success'
+            })
+          } else {
+            swal('Nothing happend!')
+        }
+      });
+      // let result = confirm('Are you sure you want to Delete this task?');
+
     }
   },
   components: {
