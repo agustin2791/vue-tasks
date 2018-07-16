@@ -67,7 +67,6 @@ export default {
     changeDescription() {
       let note = this.descriptionEdit.text;
       let id = this.descriptionEdit.id;
-      console.log(note + ' ' + id);
       this.$store.dispatch('updateDescription', {id, note});
       this.toggleEditDescription();
     },
